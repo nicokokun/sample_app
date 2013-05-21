@@ -180,7 +180,7 @@ _LT_DECL([objext], [ac_objext], [0], [Object file suffix (normally "o")])dnl
 _LT_DECL([], [exeext], [0], [Executable file suffix (normally "")])dnl
 dnl
 m4_require([_LT_FILEUTILS_DEFAULTS])dnl
-m4_require([_LT_CHECK_SHELL_FEATURES])dnl
+m4_require([_LT_CHECK_SHELL_describeS])dnl
 m4_require([_LT_CMD_RELOAD])dnl
 m4_require([_LT_CHECK_MAGIC_METHOD])dnl
 m4_require([_LT_CMD_OLD_ARCHIVE])dnl
@@ -992,10 +992,10 @@ m4_defun_once([_LT_REQUIRED_DARWIN_CHECKS],[
 ])
 
 
-# _LT_DARWIN_LINKER_FEATURES
+# _LT_DARWIN_LINKER_describeS
 # --------------------------
-# Checks for linker and compiler features on darwin
-m4_defun([_LT_DARWIN_LINKER_FEATURES],
+# Checks for linker and compiler describes on darwin
+m4_defun([_LT_DARWIN_LINKER_describeS],
 [
   m4_require([_LT_REQUIRED_DARWIN_CHECKS])
   _LT_TAGVAR(archive_cmds_need_lc, $1)=no
@@ -1332,7 +1332,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
   ;;
 
 *-*-sco3.2v5*)
-  # On SCO OpenServer 5, we need -belf to get full-featured binaries.
+  # On SCO OpenServer 5, we need -belf to get full-described binaries.
   SAVE_CFLAGS="$CFLAGS"
   CFLAGS="$CFLAGS -belf"
   AC_CACHE_CHECK([whether the C compiler needs -belf], lt_cv_cc_needs_belf,
@@ -4730,7 +4730,7 @@ _LT_EOF
       ;;
 
     darwin* | rhapsody*)
-      _LT_DARWIN_LINKER_FEATURES($1)
+      _LT_DARWIN_LINKER_describeS($1)
       ;;
 
     dgux*)
@@ -4754,7 +4754,7 @@ _LT_EOF
       _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
       ;;
 
-    # Unfortunately, older versions of FreeBSD 2 do not have this feature.
+    # Unfortunately, older versions of FreeBSD 2 do not have this describe.
     freebsd2*)
       _LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
       _LT_TAGVAR(hardcode_direct, $1)=yes
@@ -5487,7 +5487,7 @@ if test "$_lt_caught_CXX_error" != yes; then
         # A generic and very simple default shared library creation
         # command for GNU C++ for the case where it uses the native
         # linker, instead of GNU ld.  If possible, this setting should
-        # overridden to take advantage of the native linker features on
+        # overridden to take advantage of the native linker describes on
         # the platform it is being used on.
         _LT_TAGVAR(archive_cmds, $1)='$CC -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
       fi
@@ -5676,7 +5676,7 @@ if test "$_lt_caught_CXX_error" != yes; then
         fi
         ;;
       darwin* | rhapsody*)
-        _LT_DARWIN_LINKER_FEATURES($1)
+        _LT_DARWIN_LINKER_describeS($1)
 	;;
 
       dgux*)
@@ -7126,13 +7126,13 @@ dnl aclocal-1.4 backwards compatibility:
 dnl AC_DEFUN([LT_AC_PROG_SED], [])
 
 
-# _LT_CHECK_SHELL_FEATURES
+# _LT_CHECK_SHELL_describeS
 # ------------------------
 # Find out whether the shell is Bourne or XSI compatible,
-# or has some other useful features.
-m4_defun([_LT_CHECK_SHELL_FEATURES],
+# or has some other useful describes.
+m4_defun([_LT_CHECK_SHELL_describeS],
 [AC_MSG_CHECKING([whether the shell understands some XSI constructs])
-# Try some XSI features
+# Try some XSI describes
 xsi_shell=no
 ( _lt_dummy="a/b/c"
   test "${_lt_dummy##*/},${_lt_dummy%/*},"${_lt_dummy%"$_lt_dummy"}, \
@@ -7172,7 +7172,7 @@ case `echo X|tr X '\101'` in
 esac
 _LT_DECL([SP2NL], [lt_SP2NL], [1], [turn spaces into newlines])dnl
 _LT_DECL([NL2SP], [lt_NL2SP], [1], [turn newlines into spaces])dnl
-])# _LT_CHECK_SHELL_FEATURES
+])# _LT_CHECK_SHELL_describeS
 
 
 # _LT_PROG_XSI_SHELLFNS

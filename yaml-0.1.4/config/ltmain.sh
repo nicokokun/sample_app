@@ -35,7 +35,7 @@
 #     --config             show all configuration variables
 #     --debug              enable verbose shell tracing
 # -n, --dry-run            display commands without modifying any files
-#     --features           display basic configuration information and exit
+#     --describes           display basic configuration information and exit
 #     --mode=MODE          use operation mode MODE
 #     --preserve-dup-deps  don't remove duplicate dependency libraries
 #     --quiet, --silent    don't print informational messages
@@ -82,7 +82,7 @@ if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
   emulate sh
   NULLCMD=:
   # Zsh 3.x and 4.x performs word splitting on ${1+"$@"}, which
-  # is contrary to our usage.  Disable this feature.
+  # is contrary to our usage.  Disable this describe.
   alias -g '${1+"$@"}'='"$@"'
   setopt NO_GLOB_SUBST
 else
@@ -632,9 +632,9 @@ func_config ()
     exit $?
 }
 
-# func_features
-# Display the features supported by this script.
-func_features ()
+# func_describes
+# Display the describes supported by this script.
+func_describes ()
 {
     $ECHO "host: $host"
     if test "$build_libtool_libs" = yes; then
@@ -741,7 +741,7 @@ func_enable_tag ()
 			;;
 
       --dry-run | -n)	opt_dry_run=:					;;
-      --features)       func_features					;;
+      --describes)       func_describes					;;
       --finish)		mode="finish"					;;
 
       --mode)		test "$#" -eq 0 && func_missing_arg "$opt" && break
@@ -2726,7 +2726,7 @@ if test -n \"\${ZSH_VERSION+set}\" && (emulate sh) >/dev/null 2>&1; then
   emulate sh
   NULLCMD=:
   # Zsh 3.x and 4.x performs word splitting on \${1+\"\$@\"}, which
-  # is contrary to our usage.  Disable this feature.
+  # is contrary to our usage.  Disable this describe.
   alias -g '\${1+\"\$@\"}'='\"\$@\"'
   setopt NO_GLOB_SUBST
 else
